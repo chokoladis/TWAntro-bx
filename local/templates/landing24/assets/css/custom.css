@@ -1,0 +1,57 @@
+
+body{
+	background: #03011F !important;
+	color: white !important;
+}
+a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+
+*,*:hover{
+	transition: .3s all;
+}
+
+ul.ganres{
+	margin: 0;
+	padding: 0;
+	margin-top: 25px;
+}
+ul.ganres li{
+	background: white;
+	border-radius: 8px;
+	padding: 10px 20px;
+	margin-right: 10px;
+	display: block;
+}
+ul.ganres li.active, ul.ganres li:hover{
+	background: #6873CF;
+}
+ul.ganres li.active a, ul.ganres li:hover a{
+	color: white;
+}
+
+
+.films{
+	margin-top: 40px;
+}
+.films .product-item{
+	padding: 15px;
+}
+.films .product-item:hover{
+	border: 1px solid white;
+}
+
+.films .product-item-title{
+	text-overflow: unset;
+	word-wrap: break-word;
+}
+.films .product-item-title a{
+	color: white;
+	font-size: 20px;
+}
+
+.dislike img{
+	transform: rotate(180deg);
+}
