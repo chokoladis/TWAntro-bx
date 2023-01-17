@@ -77,11 +77,13 @@ use \Bitrix\Main\Localization\Loc;
 			<div class="icon">
 				<img src="/local/templates/landing24/assets/img/like.png" alt="">
 			</div>
+			0
 		</div>
 		<div class="dislike">
 			<div class="icon">
 				<img src="/local/templates/landing24/assets/img/like.png" alt="">
 			</div>
+			0
 		</div>
 	</div>
 </div>

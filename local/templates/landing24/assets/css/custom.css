@@ -5,31 +5,44 @@ body{
 }
 a{
 	text-decoration: none;
-	color: black;
 	font-size: 20px;
+}
+input{
+	display: none;
 }
 
 *,*:hover{
 	transition: .3s all;
 }
 
-ul.ganres{
+form > .row{
+	margin: 0 !important;
+}
+.ganres{
 	margin: 0;
 	padding: 0;
 	margin-top: 25px;
 }
-ul.ganres li{
+.ganres .radio{
 	background: white;
 	border-radius: 8px;
 	padding: 10px 20px;
-	margin-right: 10px;
+	margin: 0 !important;
+	margin-right: 10px !important;
+	height: fit-content !important;
 	display: block;
 }
-ul.ganres li.active, ul.ganres li:hover{
+.ganres .radio.bx-active, .ganres .radio:hover{
 	background: #6873CF;
 }
-ul.ganres li.active a, ul.ganres li:hover a{
+.ganres .radio.bx-active span, .ganres .radio:hover span{
 	color: white;
+}
+.radio label{
+	padding: 0 !important;
+	display: block !important;
+	min-height: unset !important;
+	color: black;
 }
 
 
@@ -52,6 +65,37 @@ ul.ganres li.active a, ul.ganres li:hover a{
 	font-size: 20px;
 }
 
+.ratings {
+	font-size: 20px;
+	color: white;
+}
+.ratings img{
+	padding: 7px;
+}
+.ratings > *{
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+}
+.ratings .icon{
+	border: 1px solid;
+	border-radius: 8px;
+	margin-right: 10px;
+}
+.like .icon{
+	border-color: #3CCC65;
+}
+.dislike .icon{
+	border-color: #CC3C3C;
+}
+
 .dislike img{
 	transform: rotate(180deg);
+}
+
+
+@media (min-width: 1200px){
+	.container {
+		width: 95% !important;
+	}
 }

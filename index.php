@@ -5,25 +5,35 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
     <div class="container mt-5">
         <h2>Фильмы</h2>
 
-        <ul class="ganres d-flex">
+        
             <!-- smart filter  -->
-            <li class="active"><a href="">Боевик</a></li>
-            <li><a href="">Комедия</a></li>
-            <li><a href="">Триллер</a></li>
-            <li><a href="">Ужасы</a></li>
-        </ul>
+            
+            <?
+                $APPLICATION->IncludeComponent(
+                    "bitrix:catalog.smart.filter",
+                    "",
+                    Array(
+                        "IBLOCK_ID" => "1",
+                        "FILTER_NAME" => "arrFilter"
+                    )
+                );
+            ?>
+        
 
         <?php
+
             $APPLICATION->IncludeComponent(
                 "bitrix:catalog.section",
                 "",
                 Array(
                     "IBLOCK_ID" => "1",
+                    "PAGE_ELEMENT_COUNT" => "5",
+                    "LAZY_LOAD" => "Y",
+                    "FILTER_NAME" => "arrFilter"
                 )
             );
-
         ?>
        
     </div>
-    
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

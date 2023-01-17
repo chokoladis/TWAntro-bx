@@ -189,7 +189,7 @@ if ($showTopPager)
 		foreach ($arResult['ITEMS'] as $item)
 		{	
 			?>
-			<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 flex-column">
+			<div class="col-lg-2 col-md-4 col-sm-6 col-12 flex-column">
 				<?
 					$APPLICATION->IncludeComponent(
 						'bitrix:catalog.item',
@@ -233,28 +233,6 @@ if ($showTopPager)
 	?>
 </div>
 
-<?if($arResult["NavPageCount"] > 1):?>
-
-	<?if ($arResult["NavPageNomer"]+1 <= $arResult["nEndPage"]):?>
-		<?
-			$plus = $arResult["NavPageNomer"]+1;
-			$url = $arResult["sUrlPathParams"] . "PAGEN_".$arResult["NavNum"]."=".$plus;
-
-		?>
-
-		<div class="load_more" data-url="<?=$url?>">
-			Показать еще
-		</div>
-
-	<?else:?>
-
-		<div class="load_more">
-			Загружено все
-		</div>
-
-	<?endif?>
-
-<?endif?>
 <?
 if ($showLazyLoad)
 {
@@ -264,6 +242,17 @@ if ($showLazyLoad)
 			data-use="show-more-<?=$navParams['NavNum']?>">
 			<?=$arParams['MESS_BTN_LAZY_LOAD']?>
 		</div>
+	</div>
+	<?
+}
+
+if ($showBottomPager)
+{
+	?>
+	<div data-pagination-num="<?=$navParams['NavNum']?>">
+		<!-- pagination-container -->
+		<?=$arResult['NAV_STRING']?>
+		<!-- pagination-container -->
 	</div>
 	<?
 }
