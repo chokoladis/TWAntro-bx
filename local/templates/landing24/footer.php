@@ -16,11 +16,12 @@ if (!Loader::includeModule('landing'))
 $assets = Assets\Manager::getInstance();
 $assets->addAsset('landing_auto_font_scale');
 
+$APPLICATION->AddHeadScript('https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js');
+$APPLICATION->AddHeadScript('/local/templates/landing24/assets/vendor/jquery/jquery-3.2.1.min.js');
+$APPLICATION->AddHeadScript('/local/templates/landing24/assets/js/custom.js');
+
 $APPLICATION->ShowProperty('FooterJS');
 ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-<script src="/local/templates/landing24/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
-<script src="/local/templates/landing24/assets/js/custom.js"></script>
 
 <?if (\Bitrix\Landing\Connector\Mobile::isMobileHit()):?>
 <script type="text/javascript">

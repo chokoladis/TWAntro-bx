@@ -72,18 +72,41 @@ use \Bitrix\Main\Localization\Loc;
 		</a>
 		<? endif; ?>
 	</div>
+	<?php
+		$reatings = CIBlockElement::GetList(
+			Array("SORT"=>"ASC"),
+			Array(
+				"IBLOCK_ID" => "2",
+				"PROPERTY_ID_FILM" => $item["ID"],
+			),
+			false,
+			false,
+			Array(
+				"PROPERTY_VALUE"
+			)
+		);
+		$likes = 0;
+		$dislikes = 0;
+		while($res = $reatings->GetNextElement()){
+			if ($res->fields["PROPERTY_VALUE_VALUE"] == "Понравилось"){
+				$likes++;
+			} else {
+				$dislikes++;
+			}
+		}
+	?>
 	<div class="ratings d-flex">
 		<div class="like">
 			<div class="icon">
 				<img src="/local/templates/landing24/assets/img/like.png" alt="">
 			</div>
-			0
+			<?=$likes?>
 		</div>
 		<div class="dislike">
 			<div class="icon">
 				<img src="/local/templates/landing24/assets/img/like.png" alt="">
 			</div>
-			0
+			<?=$dislikes?>
 		</div>
 	</div>
 </div>

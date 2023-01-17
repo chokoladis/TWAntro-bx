@@ -5,22 +5,16 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
     <div class="container mt-5">
         <h2>Фильмы</h2>
 
-        
-            <!-- smart filter  -->
-            
-            <?
-                $APPLICATION->IncludeComponent(
-                    "bitrix:catalog.smart.filter",
-                    "",
-                    Array(
-                        "IBLOCK_ID" => "1",
-                        "FILTER_NAME" => "arrFilter"
-                    )
-                );
-            ?>
-        
+        <?
+            $APPLICATION->IncludeComponent(
+                "bitrix:catalog.smart.filter",
+                "",
+                Array(
+                    "IBLOCK_ID" => "1",
+                    "FILTER_NAME" => "arrFilter"
+                )
+            );
 
-        <?php
 
             $APPLICATION->IncludeComponent(
                 "bitrix:catalog.section",
@@ -28,7 +22,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 Array(
                     "IBLOCK_ID" => "1",
                     "PAGE_ELEMENT_COUNT" => "5",
-                    "LAZY_LOAD" => "Y",
+                    "PAGER_TEMPLATE" => "SHOW_MORE",
                     "FILTER_NAME" => "arrFilter"
                 )
             );
