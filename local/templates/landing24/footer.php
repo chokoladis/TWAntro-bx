@@ -19,6 +19,7 @@ $assets->addAsset('landing_auto_font_scale');
 $APPLICATION->AddHeadScript('https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js');
 $APPLICATION->AddHeadScript('/local/templates/landing24/assets/vendor/jquery/jquery-3.2.1.min.js');
 $APPLICATION->AddHeadScript('/local/templates/landing24/assets/js/custom.js');
+$APPLICATION->AddHeadScript('/local/templates/landing24/assets/js/addRating.ajax.js');
 
 $APPLICATION->ShowProperty('FooterJS');
 ?>
