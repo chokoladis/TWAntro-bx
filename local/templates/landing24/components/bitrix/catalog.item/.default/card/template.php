@@ -32,9 +32,7 @@ use \Bitrix\Main\Localization\Loc;
 	<? else: ?>
 	<span class="product-item-image-wrapper" data-entity="image-wrapper">
 	<? endif; ?>
-		<span class="product-item-image-original" id="<?=$itemIds['PICT']?>"
-			style="background-image: url('<?=$item['PREVIEW_PICTURE']['SRC']?>'); <?=($showSlider ? 'display: none;' : '')?>">
-		</span>
+		<img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" width="100%" class="product-item-image-original" id="<?=$itemIds['PICT']?>">	
 		<?
 		if ($item['LABEL'])
 		{

@@ -24,10 +24,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
     <?else:?>
 
-        <div class="load_more">
-            Загружено все
-        </div>
-
     <?endif?>
 
 <?endif?>
