@@ -1,7 +1,12 @@
 .load_more {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
+    
+    padding: 20px 50px;
     cursor: pointer;
     text-align: center;
+    width: fit-content;
+    background: #6873CF;
+
+    margin: 70px auto;
+
+    max-height: 63px;
 }

@@ -13,7 +13,7 @@ $(document).ready(function(){
         $('form input#del_filter').click();
     });
     
-    $('.icon').on('click', function(){
+    $(document).on('click', '.icon', function(){
     
         let rating = $(this).parent().attr('class');
         let film_id = $(this).parents('.product-item').attr('data-id');
