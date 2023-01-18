@@ -29,5 +29,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         ?>
        
     </div>
+    <div class="alert alert-success d-none" role="alert"></div>
+    <div class="alert alert-warning d-none" role="alert"></div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

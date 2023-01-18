@@ -10,7 +10,13 @@ a{
 input{
 	display: none;
 }
-
+.alert{
+	width: fit-content;
+    margin: 0px auto;
+    bottom: 10px;
+    z-index: 100;
+    position: sticky;
+}
 *,*:hover{
 	transition: .3s all;
 }
